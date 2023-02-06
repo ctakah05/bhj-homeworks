@@ -6,13 +6,11 @@ window.onscroll = function() {
     }
 }
 function vis(f){
-    console.log(f)
-    const {top,bottom} = f.getBoundingClientRect()
-    if ((bottom < 0) || (top > window.innerHeight)) {
-        f.classList.remove('reveal_active')
-        console.log('false')
+    const { innerHeight } = window;
+    const { top } = f.getBoundingClientRect();
+    if (top < innerHeight && top > 0) {
+        f.classList.add("reveal_active");
     } else {
-        f.classList.add('reveal_active')
-        console.log('active')
+        f.classList.remove("reveal_active");
     }
 }
