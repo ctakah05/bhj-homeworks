@@ -19,7 +19,7 @@ chatWidgetInput.addEventListener("keydown", function(f) {
             'Где ваша совесть?',
         ],
             index = Math.floor(Math.random() * messageRobot.length);
-        if (messageCustomer != '') {
+        if (messageCustomer != '' && messageCustomer != ' ') {
             const messages = document.querySelector('.chat-widget__messages');
             messages.innerHTML += `
                     <div class="message message_client">
